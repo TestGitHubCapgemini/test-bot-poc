@@ -40,6 +40,7 @@ var initESW = function(gslbBaseURL) {
 			'00D5t0000004fHO',
 			'NL_Peugeot_PCDO'
 		);
+
 };
 
 var details = navigator.userAgent;
@@ -51,8 +52,7 @@ var isMobileDevice = regexp.test(details);
 if (isMobileDevice) {} else {
     console.log('inside desktop');
     var style = document.createElement('style');
-    style.innerHTML = 
-	'.embeddedServiceHelpButton .uiButton { height: 80px !important; min-width: 80px !important; width: 80px;}';
+
     style.innerHTML += 'li#esw-cta_3mi7Y0000000014{pointer-events : none;opacity :0.4;}';
     style.innerHTML += '.embedded-service .channelmenu_ctas > li:last-child{pointer-events : none;opacity :0.4;}';
     document.body.appendChild(style);
